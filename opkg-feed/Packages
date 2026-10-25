@@ -396,3 +396,20 @@ Source: github.com/ViRb3/wgcf/releases
 Description: wgcf is an unofficial, cross-platform CLI for Cloudflare Warp
 
 
+Package: sdxpinn-qmanager
+Version: 0.1.35
+Depends: sdxpinn-patch (>= 3.0), jq
+Conflicts: sdxpinn-quecmanager, sdxpinn-quecmanager-beta, sms-tool, socat-at-bridge, socat, websocat
+Replaces: sdxpinn-quecmanager, sdxpinn-quecmanager-beta, sms-tool, socat-at-bridge, socat, websocat
+Source: github.com/dr-dolomite/QManager
+Section: utils
+Architecture: sdxpinn
+Installed-Size: 13212846
+Maintainer: Russel Yasol dr-dolomite@github.com Cameron Thompson iamromulan@github.com
+MD5Sum: 594c4a9bae176166f32ae980d74aaeed
+SHA256sum: 34b24ce386d322cb0fa2dfa43bb80614accad836f011ed493bfa592cc3f2b0ca
+Size: 3765702
+Filename: sdxpinn-qmanager_0.1.35_sdxpinn.ipk
+Description: A modern web UI for Quectel RM551E modems that runs alongside LuCI
+
+
