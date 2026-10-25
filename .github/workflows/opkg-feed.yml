@@ -7,7 +7,7 @@ name: opkg-feed
 
 on:
   push:
-    branches: [development-SDXPINN]
+    branches: [rehearse/opkg-feed]
     paths: ['ipk-source/**']
   workflow_dispatch:
     inputs:
@@ -26,7 +26,7 @@ jobs:
   build:
     # Unprivileged: no secrets, read-only token. Only runs the central
     # .github/scripts/*, never anything from inside ipk-source/<pkg>/.
-    if: github.ref == 'refs/heads/development-SDXPINN'
+    if: github.ref == 'refs/heads/rehearse/opkg-feed'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -155,7 +155,7 @@ jobs:
     # Privileged: holds the signing key. Executes no script from the repo
     # except the hash-pinned usign_x64.
     needs: build
-    if: github.ref == 'refs/heads/development-SDXPINN' && needs.build.outputs.count != '0'
+    if: github.ref == 'refs/heads/rehearse/opkg-feed' && needs.build.outputs.count != '0'
     runs-on: ubuntu-latest
     environment: feed-signing
     permissions:
